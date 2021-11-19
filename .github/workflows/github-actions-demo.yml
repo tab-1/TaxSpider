@@ -1,0 +1,14 @@
+name: Demo1
+on: [push]
+jobs:
+  DEMO1:
+    runs-on: self-hosted
+    steps:
+      - run: echo "🎉 The job1 was automatically triggered by a ${{ github.event_name }} event."
+      - run: sleep 5
+      - run: echo "🐧 This job1 is now running on a ${{ runner.os }} server hosted by GitHub!"
+  DEMO2:
+    runs-on: self-hosted
+    steps:
+      - run: echo "🎉 The job2 was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job2 is now running on a ${{ runner.os }} server hosted by GitHub!"
